@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MedicoService } from '../medico.service';
-import { Medico } from '../medico';
+import { MedicoService } from '../../medico.service';
+import { Medico } from '../../medico';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -12,9 +12,9 @@ export class UpdateMedicoComponent implements OnInit {
 
   id: number;
   medico: Medico = new Medico();
-  constructor(private medicoService: MedicoService,
-    private route: ActivatedRoute,
-    private router: Router) { }
+  constructor(public medicoService: MedicoService,
+    public route: ActivatedRoute,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];

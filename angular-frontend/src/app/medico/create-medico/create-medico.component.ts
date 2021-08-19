@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Medico } from '../medico';
-import { Pessoa } from '../pessoa';
-import { MedicoService } from '../medico.service';
-import { PessoaService } from '../pessoa.service';
+import { Medico } from '../../medico';
+import { Pessoa } from '../../pessoa';
+import { MedicoService } from '../../medico.service';
+import { PessoaService } from '../../pessoa.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,14 +15,14 @@ export class CreateMedicoComponent implements OnInit {
   medico: Medico = new Medico();
   pessoas: Pessoa[];
 
-  constructor(private medicoService: MedicoService, private pessoaService: PessoaService,
-    private router: Router) { }
+  constructor(public medicoService: MedicoService, public pessoaService: PessoaService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.getPessoas();
   }
 
-  private getPessoas(){
+  public getPessoas(){
     this.pessoaService.getPessoasList().subscribe(data => {
       this.pessoas = data;
     });

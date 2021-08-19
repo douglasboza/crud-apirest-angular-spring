@@ -19,11 +19,11 @@ public class Pessoa {
 	@Column(name = "nome")
 	private String nome;
 	
-	public Pessoa(long id, String nome) {
+	public Pessoa(String nome) {
 		super();
-		this.id = id;
 		this.nome = nome;
 	}
+	public Pessoa() {}
 
 	public long getId() {
 		return id;

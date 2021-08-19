@@ -19,7 +19,8 @@ public class Medico {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.PERSIST)
+	@JoinColumn(name="pessoa_id")
 	private Pessoa pessoa;
 
 	@Column(name = "crm")
@@ -28,9 +29,7 @@ public class Medico {
 	@Column(name = "idade")
 	private int idade;
 	
-	public Medico() {
-		
-	}
+	public Medico() {}
 	
 	public Medico(Pessoa pessoa, String crm, int idade) {
 		super();

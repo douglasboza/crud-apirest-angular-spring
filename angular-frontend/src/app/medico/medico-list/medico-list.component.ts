@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Medico } from '../medico'
-import { MedicoService } from '../medico.service'
+import { Medico } from '../../medico'
+import { MedicoService } from '../../medico.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-medico-list',
@@ -11,14 +11,14 @@ export class MedicoListComponent implements OnInit {
 
   medicos: Medico[];
 
-  constructor(private medicoService: MedicoService,
-    private router: Router) { }
+  constructor(public medicoService: MedicoService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.getMedicos();
   }
 
-  private getMedicos(){
+  public getMedicos(){
     this.medicoService.getMedicosList().subscribe(data => {
       this.medicos = data;
     });

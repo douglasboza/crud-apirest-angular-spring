@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MedicoListComponent } from './medico-list/medico-list.component';
-import { CreateMedicoComponent } from './create-medico/create-medico.component';
-import { UpdateMedicoComponent } from './update-medico/update-medico.component';
-import { MedicoDetailsComponent } from './medico-details/medico-details.component';
+import { MedicoListComponent } from './medico/medico-list/medico-list.component';
+import { CreateMedicoComponent } from './medico/create-medico/create-medico.component';
+import { UpdateMedicoComponent } from './medico/update-medico/update-medico.component';
+import { MedicoDetailsComponent } from './medico/medico-details/medico-details.component';
 
-import { PessoaListComponent } from './pessoa-list/pessoa-list.component';
-import { CreatePessoaComponent } from './create-pessoa/create-pessoa.component';
-import { UpdatePessoaComponent } from './update-pessoa/update-pessoa.component';
-import { PessoaDetailsComponent } from './pessoa-details/pessoa-details.component';
+import { PessoaListComponent } from './pessoa/pessoa-list/pessoa-list.component';
+import { CreatePessoaComponent } from './pessoa/create-pessoa/create-pessoa.component';
+import { UpdatePessoaComponent } from './pessoa/update-pessoa/update-pessoa.component';
+import { PessoaDetailsComponent } from './pessoa/pessoa-details/pessoa-details.component';
 
 
 const routes: Routes = [

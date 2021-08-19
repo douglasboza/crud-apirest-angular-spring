@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pessoa } from '../pessoa'
-import { PessoaService } from '../pessoa.service'
+import { Pessoa } from '../../pessoa'
+import { PessoaService } from '../../pessoa.service'
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-pessoa-list',
@@ -11,14 +11,14 @@ export class PessoaListComponent implements OnInit {
 
   pessoas: Pessoa[];
 
-  constructor(private pessoaService: PessoaService,
-    private router: Router) { }
+  constructor(public pessoaService: PessoaService,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.getPessoas();
   }
 
-  private getPessoas(){
+  public getPessoas(){
     this.pessoaService.getPessoasList().subscribe(data => {
       this.pessoas = data;
     });

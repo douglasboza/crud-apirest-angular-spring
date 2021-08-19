@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PessoaService } from '../pessoa.service';
-import { Pessoa } from '../pessoa';
+import { PessoaService } from '../../pessoa.service';
+import { Pessoa } from '../../pessoa';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -12,9 +12,9 @@ export class UpdatePessoaComponent implements OnInit {
 
   id: number;
   pessoa: Pessoa = new Pessoa();
-  constructor(private pessoaService: PessoaService,
-    private route: ActivatedRoute,
-    private router: Router) { }
+  constructor(public pessoaService: PessoaService,
+    public route: ActivatedRoute,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
